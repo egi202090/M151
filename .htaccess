@@ -1,0 +1,6 @@
+RewriteEngine On
+RewriteBase /M151/
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+RewriteRule ^(.+)$ /M151/index.php?uri=$1 [QSA,L]
