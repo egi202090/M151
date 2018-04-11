@@ -28,9 +28,16 @@ class FormHelper extends BaseHelper
            $this->renderer->setAttribute("type",$type);
        }
         $this->renderer->setAttribute('options', $options);
-       if(isset($options[])){
-           $this->renderer->setAttribute('', $)
+       if(isset($options['label'])){
+           $this->renderer->setAttribute('label', $options['label']);
        }
+       if(isset($options['placeholder'])){
+           $this->renderer->setAttribute('placeholderText',$options['placeholder']);
+       }
+       if(isset($options['value'])){
+           $this->renderer->setAttribute('valueText',$options['value']);
+       }
+        $required=(isset($options['required']))?true:false;
         $this->renderer->setAttribute('labelText', $options['label']);
         $this->renderer->renderByFileName('input-group.php');
     }
