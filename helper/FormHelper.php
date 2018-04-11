@@ -14,16 +14,23 @@ class FormHelper extends BaseHelper
     public function createForm(string $name,
                                string $action,
                                string $method = 'POST',
+                               string $id="",
+                               string $class="login-form",
                                array $options = []
     ):string{
-        return "<form action='$action' method='$method' name='$name'>";
+        return "<form action='$action' method='$method' name='$name'id='$id' class='$class'>";
     }
 
-    public function inputGroup(string $name, string $classes, array $options = []){
+    public function inputGroup(string $name, string $classes, array $options = [], string $type){
         $this->renderer->setAttribute('name', $name);
         $this->renderer->setAttribute('classes', $classes);
-        $this->renderer->setAttribute('type', 'text');
+       if(isset($type)){
+           $this->renderer->setAttribute("type",$type);
+       }
         $this->renderer->setAttribute('options', $options);
+       if(isset($options[])){
+           $this->renderer->setAttribute('', $)
+       }
         $this->renderer->setAttribute('labelText', $options['label']);
         $this->renderer->renderByFileName('input-group.php');
     }

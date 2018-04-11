@@ -1,11 +1,17 @@
 body {
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
+    background: url("../Images/hello1.jpg") no-repeat fixed 0 0 / cover;
+    background-position: center center;
 }
 
 .topnav {
     overflow: hidden;
     background-color: #333;
+}
+
+.topnav-right{
+    float: right;
 }
 
 .topnav a {
@@ -24,7 +30,7 @@ body {
 }
 
 .active {
-    background-color: #4CAF50;
+    background-color: #3132af;
     color: white;
 }
 
