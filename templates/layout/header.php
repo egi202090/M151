@@ -13,7 +13,7 @@
     <a href="#contact">Edit Movies</a>
     <a href="#about">Upload</a>
     <div class="topnav-right">
-        <a href="">Login</a>
+        <a href="/M151/user/login">Login</a>
         <a href="">Register</a>
         <a href="">Logout</a>
     </div>

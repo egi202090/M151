@@ -18,7 +18,7 @@
         <br>
         <input type="button" value="Login" class="login-button"/>
         <br>
-        <a class="sign-up">Sign Up!</a>
+        <a href="/M151/user/register" class="sign-up">Sign Up!</a>
         <br>
     </div>
 </div>
