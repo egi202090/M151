@@ -1,3 +1,9 @@
+<?php echo $this->formHelper->createForm(
+        "user",
+        "/user/login",
+        "POST"
+);?>
+
 <link href='https://fonts.googleapis.com/css?family=Ubuntu:500' rel='stylesheet' type='text/css'>
 
 <div class="login">
@@ -6,9 +12,9 @@
     </div>
     <div class="login-form">
         <h3>Username:</h3>
-        <input type="text" placeholder="Username"/><br>
+        <?php echo $this->formHelper->inputGroup('username','form-control',['placeholder'=>'Username','required'=>true],'text');?>
         <h3>Password:</h3>
-        <input type="password" placeholder="Password"/>
+        <?php echo $this->formHelper->inputGroup('password','form-control',['placeholder'=>'Password','required'=>true],'password');?>
         <br>
         <input type="button" value="Login" class="login-button"/>
         <br>
@@ -16,3 +22,4 @@
         <br>
     </div>
 </div>
+<?php echo $this->formHelper->endForm();?>

@@ -38,16 +38,17 @@ class FormHelper extends BaseHelper
            $this->renderer->setAttribute('valueText',$options['value']);
        }
         $required=(isset($options['required']))?true:false;
-        $this->renderer->setAttribute('labelText', $options['label']);
+        $this->renderer->setAttribute('required',(($required)?'required':''));
         $this->renderer->renderByFileName('input-group.php');
     }
 
     public function input(
         string $name,
         string $classes,
-        array $options = []
+        array $options = [],
+        string $type
     ){
-        return "<input type='text' name='$name' class='$classes'>";
+        return "<input type='$type' name='$name' class='$classes'>";
     }
 
     public function endForm():string{
